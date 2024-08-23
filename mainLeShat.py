@@ -1,4 +1,5 @@
 import discord
+from discord import app_commands
 from discord.ext import commands
 
 #Token du bot
@@ -54,13 +55,16 @@ async def on_message(message):
 
 # Commandes du bot
 # Commande de base pour test
-@bot.command()
-async def boum(ctx):
-    """
-    ça boum
-    """
-    await ctx.send('kaboum miaule.')
-    
+# @bot.command()
+# async def boum(ctx):
+#     """
+#     ça boum
+#     """
+#     await ctx.send('kaboum miaule.')
+
+@bot.tree.command(name="boum", description="Fait boum")
+async def hello(interaction: discord.Interaction):
+    await interaction.response.send_message(f"{interaction.user.mention} va exploser !")
     
     
 """

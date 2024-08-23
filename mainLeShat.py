@@ -21,9 +21,13 @@ async def on_ready():
     print(f"Meow ! ({bot.user} s'est connecté !)")
     
     # Chargement des cogs
-    await bot.load_extension('serverMember')
+    await bot.load_extension("server_member")
     print("ServerMemberCog : ok.")
-
+    await bot.load_extension("math_file")
+    print("math_file : ok.")
+    await bot.load_extension("anime_db")
+    print("anime_db : ok.")
+    
 # Gestion global des erreurs
 @bot.event
 async def on_command_error(ctx, error):
@@ -77,25 +81,6 @@ async def hello(ctx, name : str):
 async def Hello_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         await ctx.send('Met un nom couillon. Syntaxe: `meow Hello <name>`')
-
-
-
-"""
-Commande pour faire des additions
-"""
-@bot.command()
-async def sum(ctx, int1 : int, int2 : int):
-    """
-    fait une addition, en gros.
-    """
-    
-    somme = int1 + int2
-    await ctx.send(f"{int1} + {int2} = {somme}")
-#Gestion d'erreur pour : sum
-@sum.error
-async def sum_error(ctx, error):
-    if isinstance(error, commands.MissingRequiredArgument):
-        await ctx.send('Syntaxe: `meow sum <nombre1> <nombre2>`')
 
     
 #Run le bot

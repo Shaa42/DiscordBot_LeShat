@@ -57,9 +57,9 @@ async def on_message(message):
 @bot.command()
 async def boum(ctx):
     """
-    allah uakbar
+    ça boum
     """
-    await ctx.send('Ta grand mère qui explose et miaule.')
+    await ctx.send('kaboum miaule.')
     
     
     
@@ -80,7 +80,7 @@ async def hello(ctx, name : str):
 @hello.error
 async def Hello_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
-        await ctx.send('Met un nom couillon. Syntaxe: `meow Hello <name>`')
+        await ctx.send('Met un nom. Syntaxe: `meow Hello <name>`')
 
     
 #Run le bot

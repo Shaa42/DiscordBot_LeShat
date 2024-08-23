@@ -29,23 +29,23 @@ class ServerMember(commands.Cog):
         
     @commands.command()
     async def Lucas(self, ctx):
-        """pd x 10^Macoumin"""
-        await ctx.send('```\nA 1 lettre près c\'est un homosexuel.\n```')
+        """Lucardo"""
+        await ctx.send('```\nFan de foot\n```')
         
     @commands.command()
     async def Tomas(self, ctx):
         """Le goat imo."""
-        await ctx.send("```\nPlease Riot nerf blackbeur.\n```")
+        await ctx.send("```\nPunpun enjoyer.\n```")
         
     @commands.command()
     async def Payn(self, ctx):
         """Le chef"""
-        await ctx.send("```\nDéludénégro c'est bon ça te va ?\n```")
+        await ctx.send("```\nSukuna lover\n```")
         
     @commands.command()
     async def Zouhair(self, ctx):
         """Rab Sala"""
-        await ctx.send("```\nAllah Uakbar\n```")
+        await ctx.send("```\nZoubir\n```")
     
 # Initialisation du cog : ServerMember
 async def setup(bot):
